@@ -71,7 +71,7 @@ public class GUI extends JFrame implements ActionListener {
       // set the size of frame
       f.setSize(400, 400);
 
-      f.show();
+      f.setVisible(true);
 
       //closing the connection
       try {
