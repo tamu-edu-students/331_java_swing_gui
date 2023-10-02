@@ -19,7 +19,6 @@ public class GUI extends JFrame implements ActionListener {
       Connection conn = null;
       //TODO STEP 1
       try {
-        Class.forName("org.postgresql.Driver");
         conn = DriverManager.getConnection(
           "jdbc:postgresql://csce-315-db.engr.tamu.edu/DBNAME",
           "USERNAME",
