@@ -20,8 +20,10 @@ public class GUI extends JFrame implements ActionListener {
       //TODO STEP 1
       try {
         Class.forName("org.postgresql.Driver");
-        conn = DriverManager.getConnection("jdbc:postgresql://csce-315-db.engr.tamu.edu/DBNAME",
-           "USERNAME", "PASSWORD");
+        conn = DriverManager.getConnection(
+          "jdbc:postgresql://csce-315-db.engr.tamu.edu/DBNAME",
+          "USERNAME",
+          "PASSWORD");
       } catch (Exception e) {
         e.printStackTrace();
         System.err.println(e.getClass().getName()+": "+e.getMessage());
@@ -33,7 +35,7 @@ public class GUI extends JFrame implements ActionListener {
       try{
         //create a statement object
         Statement stmt = conn.createStatement();
-        //create an SQL statement
+        //create a SQL statement
         //TODO Step 2
         String sqlStatement = "SQL COMMAND";
         //send statement to DBMS
