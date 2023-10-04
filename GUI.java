@@ -17,12 +17,13 @@ public class GUI extends JFrame implements ActionListener {
     {
       //Building the connection
       Connection conn = null;
-      //TODO STEP 1
+      //TODO STEP 1 (see line 7)
+      String database_name = "DBNAME";
+      String database_user = "USERNAME";
+      String database_password = "PASSWORD";
+      String database_url = String.format("jdbc:postgresql://csce-315-db.engr.tamu.edu/%s", database_name);
       try {
-        conn = DriverManager.getConnection(
-          "jdbc:postgresql://csce-315-db.engr.tamu.edu/DBNAME",
-          "USERNAME",
-          "PASSWORD");
+        conn = DriverManager.getConnection(database_url, database_user, database_password);
       } catch (Exception e) {
         e.printStackTrace();
         System.err.println(e.getClass().getName()+": "+e.getMessage());
@@ -35,7 +36,7 @@ public class GUI extends JFrame implements ActionListener {
         //create a statement object
         Statement stmt = conn.createStatement();
         //create a SQL statement
-        //TODO Step 2
+        //TODO Step 2 (see line 8)
         String sqlStatement = "SQL COMMAND";
         //send statement to DBMS
         ResultSet result = stmt.executeQuery(sqlStatement);
@@ -59,9 +60,9 @@ public class GUI extends JFrame implements ActionListener {
       // add actionlistener to button
       b.addActionListener(s);
 
-      //TODO Step 3 
+      //TODO Step 3 (see line 9)
 
-      //TODO Step 4
+      //TODO Step 4 (see line 10)
 
       // add button to panel
       p.add(b);
