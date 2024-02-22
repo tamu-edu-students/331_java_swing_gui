@@ -41,6 +41,8 @@ public class GUI extends JFrame implements ActionListener {
         //send statement to DBMS
         ResultSet result = stmt.executeQuery(sqlStatement);
         while (result.next()) {
+          // TODO you probably need to change the column name tat you are retrieving
+          //      this command gets the data from the "name" attribute
           name += result.getString("name")+"\n";
         }
       } catch (Exception e){
